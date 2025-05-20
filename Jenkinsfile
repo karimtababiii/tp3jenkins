@@ -14,7 +14,7 @@ pipeline {
                 sh "git clone https://github.com/karimtababiii/tp3jenkins.git"
             }
         }
-        stage ("Generate tp3jenkins image") {
+        stage ("Generate backend image") {
             steps {
                 dir("tp3jenkins"){
                     sh "mvn clean install"
