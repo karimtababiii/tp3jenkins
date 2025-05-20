@@ -11,11 +11,10 @@ pipeline {
         }
         stage ("Clone repo"){
             steps {
-               sh 'git clone https://github.com/karimtababiii/tp3jenkins.git'
-
+                sh "git clone https://github.com/karimtababiii/tp3jenkins.git"
             }
         }
-        stage ("Generate tp3jenkins image") {
+        stage ("Generate backend image") {
             steps {
                 dir("tp3jenkins"){
                     sh "mvn clean install"
@@ -26,7 +25,7 @@ pipeline {
         stage ("Run docker compose") {
             steps {
                 dir("tp3jenkins"){
-                    sh "docker-compose up -d"
+                    sh "docker compose up -d"
                 }
             }
         }
