@@ -4,7 +4,7 @@ services:
   spring-boot-app:
     image: tp3jenkins
     ports:
-      - "0.0.0.0:8080:8080"
+      - "0.0.0.0:8091:8091"
       environment:
   - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/api_etudiant
   - SPRING_DATASOURCE_USERNAME=root
@@ -33,4 +33,3 @@ volumes:
 
 volumes:
     api_etudiant:
-Write to Dalyx Hbibi
