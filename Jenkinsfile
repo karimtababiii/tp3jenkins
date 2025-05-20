@@ -11,7 +11,8 @@ pipeline {
         }
         stage ("Clone repo"){
             steps {
-                sh "https://github.com/karimtababiii/tp3jenkins.git"
+               sh 'git clone https://github.com/karimtababiii/tp3jenkins.git'
+
             }
         }
         stage ("Generate backend image") {
