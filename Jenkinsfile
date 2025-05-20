@@ -15,7 +15,7 @@ pipeline {
 
             }
         }
-        stage ("Generate backend image") {
+        stage ("Generate tp3jenkins image") {
             steps {
                 dir("tp3jenkins"){
                     sh "mvn clean install"
